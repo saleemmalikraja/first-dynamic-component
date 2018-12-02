@@ -11,11 +11,16 @@ import { trigger, style, animate, transition } from '@angular/animations';
     animations: [
         trigger('fadeInOut', [
             transition(':enter', [
-                style({ opacity: 0 }),
-                animate(500, style({ opacity: 1 }))
+                style({  height: '200px',
+                opacity: 1,
+                backgroundColor: 'yellow'}),
+                animate(2000, style({ opacity: 1 }))
             ]),
             transition(':leave', [
-                animate(500, style({ opacity: 0 }))
+                style({  height: '300px',
+                opacity: 1,
+                backgroundColor: 'green'}),
+                animate(2000, style({ opacity: 0 }))
             ])
         ])
     ],
